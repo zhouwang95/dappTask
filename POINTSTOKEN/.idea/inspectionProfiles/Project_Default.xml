@@ -1,0 +1,13 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="GoDfaErrorMayBeNotNil" enabled="true" level="WARNING" enabled_by_default="true">
+      <functions>
+        <function importPath="POINTSTOKEN/service" name="getUserTokenBalance" />
+      </functions>
+      <methods>
+        <method importPath="POINTSTOKEN/db" receiver="*DBRepository" name="GetPointLastRecordTime" />
+      </methods>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,29 @@
+# 数据库配置
+database:
+  dsn: "root:zw123456@tcp(localhost:3306)/points?parseTime=true&loc=Local"
+  max_open_conns: 20
+  max_idle_conns: 10
+  conn_timeout: 30s
+
+# 链配置
+chains:
+  - name: "sepolia"
+    chain_id: 11155111
+    rpc_url: "https://sepolia.infura.io/v3/352aa437f3564744a421f7d6f5de6ef7"
+    contract_addr: "0x071CeF99ad3adC1C14D4952e0aa0892F252E8611"
+    start_block: 9078538
+    confirmations: 6
+    poll_interval: 30s
+
+#  - name: "base-sepolia"
+#    chain_id: 84532
+#    rpc_url: "https://base-sepolia.infura.io/v3/352aa437f3564744a421f7d6f5de6ef7"
+#    contract_addr: "0xA6aeA46729C038E2cB90267BAFAb9340bF9cb3a4"
+#    start_block: 30594140
+#    confirmations: 6
+#    poll_interval: 30s
+
+# 积分配置
+points:
+  rate: 0.05        # 积分计算比例：余额 * 0.05
+  cron_spec: "*/10 * * * *"  # 每10分钟执行一次
